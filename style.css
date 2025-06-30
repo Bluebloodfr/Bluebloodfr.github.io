@@ -143,12 +143,11 @@ footer {
   color: var(--primary);
 }
 
-.project-image {
-  display: block;           /* center with margin: auto */
-  width: 100%;              /* fill its parent width */
-  max-width: 400px;         /* but never exceed 400px */
-  height: auto;             /* keep the correct aspect ratio */
-  margin: 1em auto;         /* give it some breathing room */
+.project-detail img.project-image {
+  display: block;       /* center via auto-margins */
+  max-width: 100%;      /* never overflow its parent container */
+  height: auto;         /* keep aspect ratio */
+  margin: 1em auto;     /* vertical breathing room */
 }
 
 .project-images {
