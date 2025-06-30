@@ -1,0 +1,166 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #edf2f7, #e2e8f0);
+  --card-bg: #ffffff;
+  --primary: #2a4365;
+  --accent: #38b2ac;
+  --text: #2d3748;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg-gradient);
+}
+
+header {
+  text-align: center;
+  padding: 2em 1em;
+  background: var(--primary);
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+section {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.5em;
+  color: var(--text);
+}
+
+section h2 {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.badges img {
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#show-more {
+  display: block;
+  margin: 1.5em auto;
+  padding: 0.75em 1.5em;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#extra-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  text-align: center;
+}
+
+#extra-content.visible {
+  max-height: 2000px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 2em 0;
+  color: #666;
+}
+
+.detail-section {
+  margin-bottom: 2em;
+}
+
+.toggle-detail {
+  display: block;
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.75em 1em;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+#more-details {
+  max-width: 800px;
+  margin: 2em auto;
+}
+#more-details h2 {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 1em;
+}
+.project-detail {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 1.5em;
+  padding: 0.5em 1em;
+}
+.project-detail summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 0.5em 0;
+  outline: none;
+}
+.project-detail[open] summary {
+  color: var(--primary);
+}
+.project-image {
+  display: block;         /* so margin: auto works */
+  max-width: 50%;        /* never overflow the parent width */
+  height: auto;           /* keep aspect ratio */
+  margin: 0.75em auto;    /* vertical spacing, centered */
+}
+
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.project-images .project-image {
+  flex: 1 1 calc(50% - 1em);
+}
+
+.project-detail ul {
+  margin: 0.5em 0 1em 1.25em;
+  list-style: disc;
+}
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Louis-Melchior Data Science Portfolio</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #edf2f7, #e2e8f0);
+      --card-bg: #ffffff;
+      --primary: #2a4365;
+      --accent: #38b2ac;
+      --text: #2d3748;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg-gradient);
+    }
+    header {
+      text-align: center;
+      padding: 2em 1em;
+      background: var(--primary);
+      color: white;
+    }
+    header h1 {
+      font-size: 2.5em;
+    }
+    section {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1.5em;
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: var(--accent);
+      margin-bottom: 0.75em;
+      font-weight: 600;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      margin-top: 1em;
+    }
+    .badges img {
+      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    #show-more {
+      display: block;
+      margin: 1.5em auto;
+      padding: 0.75em 1.5em;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    #extra-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      text-align: center;
+    }
+    #extra-content.visible {
+      max-height: 2000px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hi there <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30" alt="wave"><br>
+      I'm Louis-Melchior!
+    </h1>
+  </header>
+
+  <section id="about">
+    <h2>💫 About Me</h2>
+    <p>👨‍🎓 Student in Data Engineering &amp; Artificial Intelligence at ESILV.</p>
+    <p><img src="https://komarev.com/ghpvc/?username=Bluebloodfr&label=VISITORS" alt="Visitor Count"></p>
+  </section>
+
+  <section id="contact">
+    <h2>🔗 Contact Me</h2>
+    <ul>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/louis-melchior-giraud/" target="_blank">Louis-Melchior Giraud</a></li>
+      <li><strong>Personal Email:</strong> <a href="mailto:louismelchiorgiraud@gmail.com">louismelchiorgiraud@gmail.com</a></li>
+      <li><strong>Professional Email:</strong> <a href="mailto:louis-melchior.giraud@edu.devinci.fr">louis-melchior.giraud@edu.devinci.fr</a></li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>💻 Skills</h2>
+    <div class="badges">
+      <!-- core languages & frameworks -->
+      <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+      <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#">
+      <img src="https://img.shields.io/badge/java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+      <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C">
+      <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
+
+      <!-- web stack -->
+      <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+      <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+      <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+      <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+      <img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white" alt="Angular">
+
+      <!-- databases -->
+      <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+      <img src="https://img.shields.io/badge/postgresql-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+
+      <!-- ML & DL -->
+      <img src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch">
+      <img src="https://img.shields.io/badge/tensorflow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow">
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>👨‍💻 My Projects</h2>
+    <ul>
+      <li><strong>Computer Vision:</strong> <a href="https://github.com/Bluebloodfr/Python_for_DA" target="_blank">Deep Learning Model for Re-ID of Graphic Assets in Videos</a></li>
+      <li><strong>Machine Learning:</strong> <a href="https://github.com/Bluebloodfr/Deep_Learning_4_ReId/tree/main" target="_blank">Drug Consumption Prediction Using Machine Learning</a></li>
+      <li><strong>Language Learning App:</strong> <a href="https://github.com/Bluebloodfr/Node_Project" target="_blank">Anki Copy (Node.js)</a></li>
+      <li><strong>Clothes Renting Platform:</strong> <a href="https://github.com/Bluebloodfr/Clothes_Renting" target="_blank">Full-stack App</a></li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>🚀 Latest Experience &amp; Internships</h2>
+    <ul>
+      <li><strong>2025 (5 months)</strong> — Software Solutions Technician at Thales Alenia Space, Luxembourg</li>
+      <li><strong>2024 (4 months)</strong> — Data Scientist &amp; ML Engineer Intern at Ministère des Armées (Marine Nationale), Paris</li>
+    </ul>
+  </section>
+
+  <section id="more-details">
+  <h2>📂 Project Details &amp; Technical Summary</h2>
+
+  <details class="project-detail">
+    <summary>Thales Alenia Space Luxembourg, 2025</summary>
+    <!-- place your first project image here -->
+    <!-- <img src="images/thales-landcover.png" alt="High-res land-cover segmentation demo" class="project-image"> -->
+
+    <ul>
+      <li><strong>High Resolution Land Use Land Cover Segmentation</strong>: Developed a high-res land-cover segmentation prototype (U-Net + EfficientNet-B4).</li>
+      <img src="assets/highres.png" alt="High-res land-cover segmentation demo" class="project-image">
+      <li><strong>Cloud Detection and Segmentation</strong>: Benchmarked cloud segmentation models (OmniCloudMask, Dynamic World U-Net) on Sentinel-2/Landsat.</li>
+      <img src="assets/omnicloudmask.png" alt="Cloud Segmentation demo" class="project-image">
+      <li><strong>Foundation Model for Earth Observation</strong>: Adapted and trained the TerraMind foundation model on 12-band imagery; YAML-based configs & custom preprocessing.</li>
+      <img src="assets/terramind.png" alt="Terramind training demo" class="project-image">
+      <li><strong>Probabilities of Model Output Visualisations</strong>: Created confidence/uncertainty visualizations for decision support.</li>
+      <img src="assets/hillshade.png" alt="Probabilities visualisation demo" class="project-image">
+      <img src="assets/crosssection.png" alt="Probabilities interactive demo" class="project-image">
+      <li><strong>Stack</strong>: PyTorch Lightning, GDAL, rasterio, Label Studio, matplotlib, ipywidgets, Docker, poetry, uv, azure, vscode.</li>
+    </ul>
+  </details>
+
+  <details class="project-detail">
+    <summary>Ministère des Armées (Marine Nationale), Paris, 2024</summary>
+    <!-- place your second project image here -->
+    <!-- <img src="images/qlik-dashboard.png" alt="Qlik Dashboard screenshot" class="project-image"> -->
+
+    <ul>
+      <li><strong>Qlik Dashboard</strong>: Connected & transformed SharePoint Excel data via API, iterated visuals with end-users.</li>
+      <img src="assets/qlik.png" alt="Qlik Dashboard screenshot" class="project-image">
+      <li><strong>Attrition Prediction</strong>: Built SVM, CatBoost & PyTorch models; used SHAP for interpretability & stakeholder reports.</li>
+      <img src="assets/dénonciation.png" alt="Qlik Dashboard screenshot" class="project-image">
+      <li><strong>Stack</strong>: PyTorch, Scikit-Learn, pandas, matplotlib, jupyter, Excel, QlikSense, QlikView.</li>
+    </ul>
+  </details>
+</section>
+
+ <script>
+    document.getElementById('show-more').addEventListener('click', function() {
+      const extra = document.getElementById('extra-content');
+      extra.classList.toggle('visible');
+      this.textContent = extra.classList.contains('visible')
+        ? 'Hide details ▲'
+        : 'Read more: Project details & technical summary ▼';
+    });
+  </script>
+</body>
+</html>
