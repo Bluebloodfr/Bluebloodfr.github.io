@@ -142,11 +142,13 @@ footer {
 .project-detail[open] summary {
   color: var(--primary);
 }
+
 .project-image {
-  display: block;         /* so margin: auto works */
-  max-width: 50%;        /* never overflow the parent width */
-  height: auto;           /* keep aspect ratio */
-  margin: 0.75em auto;    /* vertical spacing, centered */
+  display: block;           /* center with margin: auto */
+  width: 100%;              /* fill its parent width */
+  max-width: 400px;         /* but never exceed 400px */
+  height: auto;             /* keep the correct aspect ratio */
+  margin: 1em auto;         /* give it some breathing room */
 }
 
 .project-images {
