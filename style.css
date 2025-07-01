@@ -144,10 +144,10 @@ footer {
 }
 
 .project-detail img.project-image {
-  display: block;       /* center via auto-margins */
-  max-width: 100%;      /* never overflow its parent container */
-  height: auto;         /* keep aspect ratio */
-  margin: 1em auto;     /* vertical breathing room */
+  display: block;     
+  max-width: 100%;     
+  height: auto;    
+  margin: 1em auto;     
 }
 
 .project-images {

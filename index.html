@@ -6,7 +6,6 @@
   <link rel="shortcut icon" href="/favicon2.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Louis-Melchior Data Science Portfolio</title>
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -108,7 +107,7 @@
       font-size: 0.9rem;
       transition: transform 0.2s ease;
       transform: translateY(calc(100% - 32px));
-      z-index: 999;                   /* make sure it sits on top */
+      z-index: 999;                 
     }
     #chat-container:not(.collapsed) {
       transform: translateY(0);
@@ -220,9 +219,6 @@
 
   <details class="project-detail">
     <summary>Thales Alenia Space Luxembourg, 2025</summary>
-    <!-- place your first project image here -->
-    <!-- <img src="images/thales-landcover.png" alt="High-res land-cover segmentation demo" class="project-image"> -->
-
     <ul>
       <li><strong>High Resolution Land Use Land Cover Segmentation</strong>: Developed a high-res land-cover segmentation prototype (U-Net + EfficientNet-B4).</li>
       <img src="assets/highres.png" alt="High-res land-cover segmentation demo" class="project-image" width="600">
@@ -239,9 +235,6 @@
 
   <details class="project-detail">
     <summary>Ministère des Armées (Marine Nationale), Paris, 2024</summary>
-    <!-- place your second project image here -->
-    <!-- <img src="images/qlik-dashboard.png" alt="Qlik Dashboard screenshot" class="project-image"> -->
-
     <ul>
       <li><strong>Qlik Dashboard</strong>: Connected & transformed SharePoint Excel data via API, iterated visuals with end-users.</li>
       <img src="assets/qlik.png" alt="Qlik Dashboard screenshot" class="project-image" width="600">
@@ -269,7 +262,6 @@
     });
   </script>
   <script>
-  // toggle open/close
   document.getElementById('chat-header').onclick = () => {
     document.getElementById('chat-container').classList.toggle('collapsed');
   };
@@ -287,14 +279,6 @@
     append('bot', '…');
 
     try {
-      // const res = await fetch(
-      //   'https://bluebloodfr-github-5e68n74na-bluebloodfrs-projects.vercel.app/api/chat', 
-      //   {
-      //     method: 'POST',
-      //     headers: { 'Content-Type': 'application/json' },
-      //     body: JSON.stringify({ message: text })
-      //   }
-      // );
 
       const res = await fetch('https://bluebloodfr-github-5e68n74na-bluebloodfrs-projects.vercel.app/api/chat', {
         method: 'POST',
