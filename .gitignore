@@ -1,5 +1,6 @@
 # ignore local environment file
 .env.local
+.env
 
 # node modules, editor files, logs, etc.
 node_modules/

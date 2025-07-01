@@ -246,7 +246,7 @@
       <li><strong>Qlik Dashboard</strong>: Connected & transformed SharePoint Excel data via API, iterated visuals with end-users.</li>
       <img src="assets/qlik.png" alt="Qlik Dashboard screenshot" class="project-image" width="600">
       <li><strong>Attrition Prediction</strong>: Built SVM, CatBoost & PyTorch models; used SHAP for interpretability & stakeholder reports.</li>
-      <img src="assets/dénonciation.png" alt="Qlik Dashboard screenshot" class="project-image" width="600">
+      <img src="assets/dénonciation.png" alt="Attrition Prediction screenshot" class="project-image" width="600">
       <li><strong>Stack</strong>: PyTorch, Scikit-Learn, pandas, matplotlib, jupyter, Excel, QlikSense, QlikView.</li>
     </ul>
   </details>
@@ -284,21 +284,33 @@
     append('user', text);
     inputEl.value = '';
     sendBtn.disabled = true;
-    append('bot', '…');  // placeholder
+    append('bot', '…');
 
     try {
-      const res = await fetch(
-        'https://bluebloodfr-github-5e68n74na-bluebloodfrs-projects.vercel.app/api/chat', 
-        {
+      // const res = await fetch(
+      //   'https://bluebloodfr-github-5e68n74na-bluebloodfrs-projects.vercel.app/api/chat', 
+      //   {
+      //     method: 'POST',
+      //     headers: { 'Content-Type': 'application/json' },
+      //     body: JSON.stringify({ message: text })
+      //   }
+      // );
+
+      const res = await fetch('/api/chat', {
         method: 'POST',
-        headers: {'Content-Type':'application/json'},
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text })
       });
-      const { reply } = await res.json();
-      updateLastBot(reply);
+      if (!res.ok) {
+        console.error('API returned HTTP', res.status, await res.text());
+        updateLastBot(`Error ${res.status}`);
+      } else {
+        const { reply } = await res.json();
+        updateLastBot(reply);
+      }
     } catch (err) {
-      updateLastBot('Oops, something went wrong.');
-      console.error(err);
+      console.error('Fetch threw:', err);
+      updateLastBot(`Network error: ${err.message}`);
     }
     sendBtn.disabled = false;
   };
