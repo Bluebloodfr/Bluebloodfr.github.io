@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   console.log('📦 body:', req.body);
   console.log('🔑 OPENAI_API_KEY:', process.env.OPENAI_API_KEY ? '✅ loaded' : '❌ MISSING');
 
-  res.setHeader('Access-Control-Allow-Origin', 'https://Bluebloodfr.github.io');
+  res.setHeader('Access-Control-Allow-Origin', 'https://bluebloodfr.github.io');
   res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') return res.status(200).end();
