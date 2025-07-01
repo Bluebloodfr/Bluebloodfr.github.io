@@ -207,8 +207,54 @@
         : 'Read more: Project details & technical summary ▼';
     });
   </script>
+  <script>
+  // toggle open/close
+  document.getElementById('chat-header').onclick = () => {
+    document.getElementById('chat-container').classList.toggle('collapsed');
+  };
+
+  const inputEl = document.getElementById('chat-input');
+  const sendBtn = document.getElementById('chat-send');
+  const msgsEl = document.getElementById('chat-messages');
+
+  sendBtn.onclick = async () => {
+    const text = inputEl.value.trim();
+    if (!text) return;
+    append('user', text);
+    inputEl.value = '';
+    sendBtn.disabled = true;
+    append('bot', '…');  // placeholder
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ message: text })
+      });
+      const { reply } = await res.json();
+      updateLastBot(reply);
+    } catch (err) {
+      updateLastBot('Oops, something went wrong.');
+      console.error(err);
+    }
+    sendBtn.disabled = false;
+  };
+
+  function append(who, text) {
+    const m = document.createElement('div');
+    m.className = who;
+    m.textContent = text;
+    msgsEl.appendChild(m);
+    msgsEl.scrollTop = msgsEl.scrollHeight;
+  }
+
+  function updateLastBot(text) {
+    const bots = msgsEl.querySelectorAll('.bot');
+    bots[bots.length - 1].textContent = text;
+  }
+</script>
    <div id="chat-container" class="collapsed">
-    <div id="chat-header">💬 Ask Louis</div>
+    <div id="chat-header">💬 Ask Louis-Melchior</div>
     <div id="chat-messages"></div>
     <div id="chat-input-area">
       <input id="chat-input" type="text" placeholder="Ask me anything…">
