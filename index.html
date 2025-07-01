@@ -226,7 +226,9 @@
     append('bot', '…');  // placeholder
 
     try {
-      const res = await fetch('/api/chat', {
+      const res = await fetch(
+        'https://bluebloodfr-github-5e68n74na-bluebloodfrs-projects.vercel.app/api/chat', 
+        {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({ message: text })

@@ -1,0 +1,8 @@
+# ignore local environment file
+.env.local
+
+# node modules, editor files, logs, etc.
+node_modules/
+*.log
+.vscode/
+.vercel
