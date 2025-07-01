@@ -92,6 +92,60 @@
     ul li {
       margin-bottom: 0.5em;
     }
+    #chat-container {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      width: 280px;
+      max-height: 360px;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      overflow: hidden;
+      font-size: 0.9rem;
+      transition: transform 0.2s ease;
+      transform: translateY(calc(100% - 32px));
+      z-index: 999;                   /* make sure it sits on top */
+    }
+    #chat-container:not(.collapsed) {
+      transform: translateY(0);
+    }
+    #chat-header {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.5rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    #chat-messages {
+      flex: 1;
+      padding: 0.5rem;
+      overflow-y: auto;
+      background: #f9f9f9;
+    }
+    #chat-messages .user { text-align:right; margin:0.25rem 0; }
+    #chat-messages .bot  { text-align:left;  margin:0.25rem 0; }
+    #chat-input-area {
+      display: flex;
+      border-top:1px solid #ddd;
+    }
+    #chat-input {
+      flex:1;
+      border:none;
+      padding:0.5rem;
+      font-size:0.9rem;
+    }
+    #chat-send {
+      border:none;
+      background:var(--primary);
+      color:#fff;
+      padding:0 1rem;
+      cursor:pointer;
+    }
+    #chat-send:disabled { opacity:0.6; cursor:default; }
   </style>
 </head>
 <body>
@@ -197,7 +251,14 @@
     </ul>
   </details>
 </section>
-
+<div id="chat-container" class="collapsed">
+    <div id="chat-header">💬 Ask Louis-Melchior</div>
+    <div id="chat-messages"></div>
+    <div id="chat-input-area">
+      <input id="chat-input" type="text" placeholder="Ask me anything…">
+      <button id="chat-send">Send</button>
+    </div>
+  </div>
  <script>
     document.getElementById('show-more').addEventListener('click', function() {
       const extra = document.getElementById('extra-content');
@@ -255,13 +316,5 @@
     bots[bots.length - 1].textContent = text;
   }
 </script>
-   <div id="chat-container" class="collapsed">
-    <div id="chat-header">💬 Ask Louis-Melchior</div>
-    <div id="chat-messages"></div>
-    <div id="chat-input-area">
-      <input id="chat-input" type="text" placeholder="Ask me anything…">
-      <button id="chat-send">Send</button>
-    </div>
-  </div>
 </body>
 </html>
