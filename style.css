@@ -200,15 +200,11 @@ footer {
 }
 #chat-messages .user {
   text-align: right;
-  margin: 0.25rem 0;
-  text-align: right;
-  margin: 0.75rem 0;
+  margin: 3rem 0;
 }
 #chat-messages .bot {
   text-align: left;
-  margin: 0.25rem 0;
-  text-align: left;
-  margin: 0.75rem 0;
+  margin: 3rem 0;
 }
 #chat-input-area {
   display: flex;
