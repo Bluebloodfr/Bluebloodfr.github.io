@@ -270,6 +270,13 @@
   const sendBtn = document.getElementById('chat-send');
   const msgsEl = document.getElementById('chat-messages');
 
+  inputEl.addEventListener('keydown', (e) => {
+   if (e.key === 'Enter' && !sendBtn.disabled) {
+     e.preventDefault();
+     sendBtn.click();
+   }
+ });
+
   sendBtn.onclick = async () => {
     const text = inputEl.value.trim();
     if (!text) return;
